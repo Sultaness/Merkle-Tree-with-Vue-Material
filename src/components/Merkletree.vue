@@ -199,7 +199,7 @@ export default {
     async hashTxs() {
       //hash the transactions and display the leaf nodes
       if (this.txs.length == 1) {
-        this.merkleroot = sha256(sha256(this.txs[0]))
+        this.merkleroot = this.txs[0]
         this.message = `The Merkle Root is ${this.merkleroot}`  
       }
       else if (this.txs.length > 1){
